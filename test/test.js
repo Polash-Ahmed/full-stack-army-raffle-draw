@@ -1,0 +1,11 @@
+const myDb = require("../db/db");
+myDb.create("user 1", 11);
+myDb.create("user 2", 13);
+myDb.create("user 3", 17);
+myDb.create("user 4", 15);
+myDb.create("user 5", 18);
+myDb.bulkCreate("user 6", 10, 5);
+const tickets = myDb.find();
+console.log("all teckits:", tickets);
+const winners = (myDb.winners = myDb.draw(5));
+console.log(winners);
